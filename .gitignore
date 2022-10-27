@@ -1,0 +1,22 @@
+# Generic
+temp
+*.log
+.DS_Store
+
+# Yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Development
+.vscode
+
+# Tools
+node_modules/
+
+# Project
+dist/

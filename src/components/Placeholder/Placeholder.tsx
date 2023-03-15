@@ -6,4 +6,17 @@ const StyledPlaceholder = styled(Box)`
   background-color: ${({ theme }) => theme.colors['brand-primary']};
 `
 
-export const Placeholder: React.FC<BoxProps> = (props) => <StyledPlaceholder {...props} />
+interface PlaceHolderProps {
+  debugMe?: boolean
+}
+
+export const Placeholder: React.FC<PlaceHolderProps & BoxProps> = ({ children, debugMe, ...props }) => (
+  <StyledPlaceholder {...props}>
+    {debugMe && <h1>DEBUG ME!</h1>}
+    {children}
+  </StyledPlaceholder>
+)
+
+// const Component = () => {
+//   return <Placeholder p={5} />
+// }

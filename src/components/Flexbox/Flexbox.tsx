@@ -26,26 +26,27 @@ import {
   border,
   textAlign,
   typography,
-  ResponsiveValue,
 } from 'styled-system'
-
-import { CodacyTheme, FontWeights } from '@/theme'
 
 export interface As {
   as?: React.ElementType
 }
 
-type CommonProps = ColorProps &
+type CommonProps = React.PropsWithChildren &
+  ColorProps &
   LayoutProps &
   SpaceProps &
   BorderProps &
   PositionProps &
   ShadowProps &
   TextAlignProps &
-  Omit<TypographyProps, 'fontWeight'> &
-  As & {
-    fontWeight?: ResponsiveValue<number | FontWeights, CodacyTheme>
-  }
+  TypographyProps &
+  As
+//Omit<TypographyProps, 'fontWeight'> &
+
+// & {
+//   fontWeight?: ResponsiveValue<number | FontWeights, CodacyTheme>
+// }
 
 export type BoxProps = CommonProps & FlexboxProps & GridboxProps
 export type FlexProps = CommonProps & FlexboxProps

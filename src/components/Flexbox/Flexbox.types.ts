@@ -1,5 +1,5 @@
 import * as StyledSystem from 'styled-system'
-import { CodacyTheme } from '../../theme'
+import { CodacyTheme } from '@/theme'
 
 export interface ColorProps
   extends StyledSystem.BackgroundColorProps<CodacyTheme>,

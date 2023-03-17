@@ -1,4 +1,5 @@
 import '@emotion/react'
+
 import { CodacyTheme } from './theme'
 
 declare module '@emotion/react' {

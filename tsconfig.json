@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "dist",
+    "outDir": "dist/esm",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
@@ -12,7 +12,6 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
-    "emitDeclarationOnly": true,
     "allowJs": false,
     "pretty": true,
     "allowUnreachableCode": false,
@@ -21,10 +20,21 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strict": true,
-    // "paths": {
-    //   "@/*": ["./src/*"]
-    // }
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "storybook-static", "src/**/*.stories.tsx", "src/**/*.test.tsx"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "storybook-static",
+    "src/**/*.stories.tsx",
+    "src/**/*.test.tsx",
+    "src/test-utils",
+    "src/jestSetup.ts",
+    // "stories",
+    // "templates",
+  ]
 }

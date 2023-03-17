@@ -1,6 +1,6 @@
 import React from 'react'
 import { Global, ThemeProvider as EmotionThemeProvider, useTheme } from '@emotion/react'
-import { CodacyTheme, codacyTheme } from '../theme'
+import { CodacyTheme, codacyTheme } from '@/theme'
 import { normalize } from 'polished'
 import styled from '@emotion/styled'
 

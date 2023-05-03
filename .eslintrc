@@ -9,33 +9,30 @@
   "parser": "@typescript-eslint/parser",
   "extends": [
     "eslint:recommended",
-    "react-app",
+    //"react-app",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:mdx/recommended"
-    // "prettier/@typescript-eslint" // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with Prettier.
+    "plugin:mdx/recommended"  
   ],
   "rules": {
-    // "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-empty-interface": "off"
-    // "@typescript-eslint/no-empty-function": "off",
-    // "@typescript-eslint/ban-ts-ignore": "off",
-    // "@typescript-eslint/no-inferrable-types": "off",
-    // "@typescript-eslint/no-explicit-any": "off",
-    // "@typescript-eslint/explicit-module-boundary-types": "off"
+    "@typescript-eslint/no-empty-interface": "off",
+    "react/jsx-uses-vars": "error",
+    "react/jsx-uses-react": "error"      
   },
   "overrides": [
-    // {
-    //   "files": ["*.js"],
-    //   "rules": {
-    //     "@typescript-eslint/no-var-requires": "off"
-    //   }
-    // },
-    // {
-    //   "files": ["*.mdx"],
-    //   "extends": ["plugin:mdx/recommended", "plugin:mdx/overrides"]
-    // }
-  ]
+    {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }

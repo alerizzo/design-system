@@ -40,7 +40,8 @@ export type CodacyTheme = {
 }
 
 // *** Theme Standard Values ***********************
-const fontStack = (fonts: string[]) => fonts.map((font) => (font.includes(' ') ? `"${font}"` : font)).join(', ')
+const fontStack = (fonts: string[]) =>
+  fonts.map((font) => (font.includes(' ') ? `"${font}"` : font)).join(', ')
 
 const remScale = 16
 const gridSize = 0.5 /* rem */
@@ -83,9 +84,18 @@ const radii = ['0.125rem' /* 2px */, '0.25rem' /* 4px */, '0.5rem' /* 8px */]
 const shadowsFx = (scheme: ColorScheme) => [
   `0 0.0625rem 0.125rem ${rgba(scheme['neutral-600'], 0.2)}`,
   `0 0.125rem 0.375rem ${rgba(scheme['neutral-600'], 0.3)}`,
-  `0 0.125rem 0.375rem ${rgba(scheme['neutral-600'], 0.2)}, 0 0.125rem 0.5rem ${rgba(scheme['neutral-600'], 0.1)}`,
-  `0 0.25rem 0.5rem ${rgba(scheme['neutral-600'], 0.2)}, 0 0.25rem 0.75rem ${rgba(scheme['neutral-600'], 0.1)}`,
-  `0 0.75rem 1rem ${rgba(scheme['neutral-600'], 0.2)}, 0 0.75rem 1.5rem ${rgba(scheme['neutral-600'], 0.1)}`,
+  `0 0.125rem 0.375rem ${rgba(scheme['neutral-600'], 0.2)}, 0 0.125rem 0.5rem ${rgba(
+    scheme['neutral-600'],
+    0.1
+  )}`,
+  `0 0.25rem 0.5rem ${rgba(scheme['neutral-600'], 0.2)}, 0 0.25rem 0.75rem ${rgba(
+    scheme['neutral-600'],
+    0.1
+  )}`,
+  `0 0.75rem 1rem ${rgba(scheme['neutral-600'], 0.2)}, 0 0.75rem 1.5rem ${rgba(
+    scheme['neutral-600'],
+    0.1
+  )}`,
 ]
 
 const transitions = ['0.2s ease-in-out', '0.35s ease-in-out', '0.75s ease-in-out']

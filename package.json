@@ -4,7 +4,7 @@
   "packageManager": "yarn@3.2.4",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/esm/index.d.ts",
   "files": [
     "dist",
     "package.json",
@@ -20,12 +20,14 @@
     "test:coverage": "jest --coverage",
     "postinstall": "husky install",
     "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "postpack": "pinst --enable",
+    "lint-cmd": "eslint ./src --ignore-path .eslintignore --ext .js,.jsx,.ts,.tsx"
   },
   "peerDependencies": {
     "@emotion/is-prop-valid": "^1.2.0",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@types/styled-system": "^5.1.15",
     "polished": "^4.2.2",
     "react": "^18.2.0",
     "styled-system": "^5.1.5"
@@ -43,6 +45,8 @@
     "@typescript-eslint/parser": "^5.59.2",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-mdx": "^2.0.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -61,8 +65,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
+      "prettier --write",
+      "eslint --ignore-path .eslintignore"
     ],
     "*.{md,mdx}": [
       "prettier --write"

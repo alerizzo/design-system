@@ -1,0 +1,24 @@
+# --- from .gitignore ---------
+# Generic
+temp
+*.log
+.DS_Store
+
+# Development
+.vscode/
+.metals/
+.idea/
+.husky/
+.yarn/
+
+# Tools
+node_modules/
+
+# Project
+storybook-static/
+coverage/
+dist/
+
+
+# -----------------------------
+templates/

@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 
 const StyledPlaceholder = styled(Box)`
   background-color: ${({ theme }) => theme.colors['brand-primary']};
+  align-items: baseline;
 `
 
 interface PlaceHolderProps {

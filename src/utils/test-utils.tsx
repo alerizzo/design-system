@@ -7,7 +7,7 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => (
 )
 
 const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>) =>
-  render(ui, { wrapper: AllTheProviders, ...options })
+  render(ui, { wrapper: AllTheProviders, ...options }) as any
 
 export * from '@testing-library/react'
 export { customRender as render }

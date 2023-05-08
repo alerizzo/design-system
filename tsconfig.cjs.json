@@ -4,5 +4,6 @@
     "outDir": "dist/cjs",
     "module": "CommonJS",
   },
-  "exclude": ["src/**/*.stories.tsx", "src/**/*.test.tsx"]
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.stories.tsx", "src/**/*.test.tsx", "src/utils/test-utils.tsx"]
 }

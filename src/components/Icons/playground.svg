@@ -1,0 +1,64 @@
+  <!-- Template for working on new icons -->
+  <svg className="codacy-icon"
+  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <style>
+
+      * {
+        stroke: #f00;
+        fill: #00f;
+      }
+
+      .ionicon-stroke-none, .stroke-none {
+        stroke: none;
+      }
+
+      .ionicon-fill-none, .fill-none {
+        fill: none;
+      }
+
+      .ionicon-stroke-width, .stroke-width {
+        stroke-width: 32px;
+      }
+
+      .background {
+        stroke: #0005;
+        stroke-dasharray: 5,5;
+        fill: #0001;
+      }
+
+    </style>
+
+    <rect x="0" y="0" width="512" height="512" class="background" />
+
+    <!-- Copy from here -->
+    <rect x="32"
+      y="96"
+      width="90"
+      height="320"
+      rx="20"
+      ry="20"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="stroke-width"/>
+    <rect x="211"
+      y="96"
+      width="90"
+      height="320"
+      rx="20"
+      ry="20"
+      opacity="0.35"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="fill-none stroke-width"/>
+    <rect x="390"
+      y="96"
+      width="90"
+      height="320"
+      rx="20"
+      ry="20"
+      opacity="0.35"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="fill-none stroke-width"/>
+    <!-- Up to here -->
+  </svg>

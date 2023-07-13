@@ -1,4 +1,4 @@
-import { ContainerComponentProps } from '../types'
+import { ComponentProps, ContainerComponentProps } from '../types'
 import { BoxProps } from '../Flexbox'
 import { Size } from '@/theme'
 
@@ -48,7 +48,7 @@ export interface CaptionProps
 export type DataPointFormatter = '+0' | '+0[,]0' | '+0a' | '+0[.]0a' | '0a' | '0[.]0a' | '0[,]0'
 
 export type DataPointTextSize = 'lg' | 'md' | 'sm'
-export interface DataPointProps extends ContainerComponentProps, Omit<BoxProps, 'size'> {
+export interface DataPointProps extends ComponentProps, Omit<BoxProps, 'size'> {
   value?: number
   showPercentage?: boolean
   format?: DataPointFormatter | string

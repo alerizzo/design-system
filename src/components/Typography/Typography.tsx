@@ -70,7 +70,7 @@ export const Caption = React.forwardRef<HTMLParagraphElement, CaptionProps>(
 Caption.displayName = 'Caption'
 
 export const DataPoint = React.forwardRef<HTMLParagraphElement, DataPointProps>(
-  ({ children, size = 'sm', as = 'p', value, showPercentage, format, ...props }, ref) => {
+  ({ size = 'sm', as = 'p', value, showPercentage, format, ...props }, ref) => {
     if (value === undefined)
       return (
         <StyledDataPoint textSize={size} as={as} {...props} ref={ref}>
